@@ -60,7 +60,7 @@
       "id": "b200eee5-b277-4151-ace7-1f6cb1374eb8",
       "comment": "",
       "command": "click",
-      "target": "xpath=(//button[@type='submit'])[5]",
+      "target": "css=.well:nth-child(3) .btn-primary",
       "targets": [
         ["css=.well:nth-child(3) .btn-primary", "css:finder"],
         ["xpath=(//button[@type='submit'])[5]", "xpath:attributes"],
@@ -97,7 +97,7 @@
       "id": "de3b4923-96e1-4ef8-ae46-c1d481ddb95e",
       "comment": "",
       "command": "click",
-      "target": "css=.panel:nth-child(1) .title-txt",
+      "target": "css=.panel a[href*='One'] .title-txt",
       "targets": [
         ["css=.panel:nth-child(1) .title-txt", "css:finder"],
         ["xpath=//div[@id='accordion']/div/div/h4/a/span[2]", "xpath:idRelative"],
@@ -109,7 +109,7 @@
       "id": "0acceb76-5200-4aac-bcdc-f5793a80cb25",
       "comment": "",
       "command": "click",
-      "target": "css=#collapseOne tr:nth-child(4) .side-name-link",
+      "target": "css=#collapseOne a[href*='coupon'] .side-name-link",
       "targets": [
         ["css=#collapseOne tr:nth-child(4) .side-name-link", "css:finder"],
         ["xpath=//div[@id='collapseOne']/div/table/tbody/tr[4]/td/li/a/span", "xpath:idRelative"],
@@ -121,7 +121,7 @@
       "id": "c723bb54-8ad2-4a62-a549-8c8985f6dcb6",
       "comment": "",
       "command": "click",
-      "target": "css=.pull-right:nth-child(2)",
+      "target": "css=#content a[href*='create']",
       "targets": [
         ["css=.pull-right:nth-child(2)", "css:finder"],
         ["xpath=//div[@id='content']/a", "xpath:idRelative"],
@@ -172,11 +172,7 @@
       "comment": "",
       "command": "click",
       "target": "css=.form-actions",
-      "targets": [
-        ["css=.form-actions", "css:finder"],
-        ["xpath=//div[@id='content']/div[3]/div/div/div/form/div[7]", "xpath:idRelative"],
-        ["xpath=//form/div[7]", "xpath:position"]
-      ],
+      "targets": [],
       "value": ""
     }, {
       "id": "457fb858-bee9-4ce1-90ee-c803aa698b85",
@@ -256,7 +252,7 @@
       "id": "6dcc8281-4c47-44a0-b162-08b0f45f226b",
       "comment": "",
       "command": "click",
-      "target": "css=.panel:nth-child(1) .title-txt",
+      "target": "css=.panel a[href*='One'] .title-txt",
       "targets": [
         ["css=.panel:nth-child(1) .title-txt", "css:finder"],
         ["xpath=//div[@id='accordion']/div/div/h4/a/span[2]", "xpath:idRelative"],
@@ -268,7 +264,7 @@
       "id": "44fe1200-0338-4484-80d4-925245fc23f2",
       "comment": "",
       "command": "click",
-      "target": "css=#collapseOne tr:nth-child(4) .side-name-link",
+      "target": "css=#collapseOne a[href*='coupon'] .side-name-link",
       "targets": [
         ["css=#collapseOne tr:nth-child(4) .side-name-link", "css:finder"],
         ["xpath=//div[@id='collapseOne']/div/table/tbody/tr[4]/td/li/a/span", "xpath:idRelative"],
@@ -279,39 +275,23 @@
     }, {
       "id": "733d5dd0-b60b-440e-b7eb-1a2b9d143751",
       "comment": "",
-      "command": "type",
+      "command": "//type",
       "target": "name=name",
-      "targets": [
-        ["name=name", "name"],
-        ["css=.form-control:nth-child(1)", "css:finder"],
-        ["xpath=//input[@name='name']", "xpath:attributes"],
-        ["xpath=//div[@id='content']/form/div/input", "xpath:idRelative"],
-        ["xpath=//input", "xpath:position"]
-      ],
+      "targets": [],
       "value": "CouponFixed"
     }, {
       "id": "62017e3f-9eb7-48bb-ab2d-8e9fa00f82fc",
       "comment": "",
-      "command": "click",
+      "command": "//click",
       "target": "css=.form-inline > .btn",
-      "targets": [
-        ["css=.form-inline > .btn", "css:finder"],
-        ["xpath=//button[@type='submit']", "xpath:attributes"],
-        ["xpath=//div[@id='content']/form/button", "xpath:idRelative"],
-        ["xpath=//form/button", "xpath:position"]
-      ],
+      "targets": [],
       "value": ""
     }, {
       "id": "e0996a40-857b-4e32-bd4d-8f2521432a7e",
       "comment": "",
-      "command": "click",
+      "command": "//click",
       "target": "css=td:nth-child(3)",
-      "targets": [
-        ["css=td:nth-child(3)", "css:finder"],
-        ["xpath=//tr[@id='tr18047']/td[3]", "xpath:idRelative"],
-        ["xpath=//td[3]", "xpath:position"],
-        ["xpath=//td[contains(.,'0%')]", "xpath:innerText"]
-      ],
+      "targets": [],
       "value": ""
     }, {
       "id": "bbe58ff3-6207-454f-9ff6-9f1fe23a0317",
