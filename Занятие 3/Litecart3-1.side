@@ -302,19 +302,6 @@
       "targets": [],
       "value": ""
     }, {
-      "id": "dd21e165-c77e-4046-8e54-85b6e8e07cd1",
-      "comment": "",
-      "command": "click",
-      "target": "name=query",
-      "targets": [
-        ["name=query", "name"],
-        ["css=.input-wrapper > input", "css:finder"],
-        ["xpath=//input[@name='query']", "xpath:attributes"],
-        ["xpath=//div[@id='box-search']/div/form/div/input", "xpath:idRelative"],
-        ["xpath=//input", "xpath:position"]
-      ],
-      "value": ""
-    }, {
       "id": "44d8b36e-0cda-4711-9491-16279e6dabb1",
       "comment": "",
       "command": "store",
@@ -322,31 +309,12 @@
       "targets": [],
       "value": "query"
     }, {
-      "id": "bf7bf76a-7b3b-412a-b481-39401d09869a",
+      "id": "59241b93-7195-4bd3-9c6c-804369fa75f5",
       "comment": "",
-      "command": "type",
-      "target": "name=query",
-      "targets": [
-        ["name=query", "name"],
-        ["css=.input-wrapper > input", "css:finder"],
-        ["xpath=//input[@name='query']", "xpath:attributes"],
-        ["xpath=//div[@id='box-search']/div/form/div/input", "xpath:idRelative"],
-        ["xpath=//input", "xpath:position"]
-      ],
-      "value": "${query}"
-    }, {
-      "id": "981ac43c-9dc9-4cbb-8d7e-59c275afefb0",
-      "comment": "",
-      "command": "sendKeys",
-      "target": "name=query",
-      "targets": [
-        ["name=query", "name"],
-        ["css=.input-wrapper > input", "css:finder"],
-        ["xpath=//input[@name='query']", "xpath:attributes"],
-        ["xpath=//div[@id='box-search']/div/form/div/input", "xpath:idRelative"],
-        ["xpath=//input", "xpath:position"]
-      ],
-      "value": "${KEY_ENTER}"
+      "command": "run",
+      "target": "Func Search",
+      "targets": [],
+      "value": ""
     }, {
       "id": "31b23e72-be33-4267-88d9-efe35c211ea8",
       "comment": "Прямая проверка наличия 5 элементов",
@@ -524,6 +492,13 @@
       "target": "",
       "targets": [],
       "value": ""
+    }, {
+      "id": "39916afe-e22d-40f2-a8bd-eb9631c02873",
+      "comment": "",
+      "command": "",
+      "target": "linkText=Selenium_Start_Exercise",
+      "targets": [],
+      "value": ""
     }]
   }, {
     "id": "8de3175a-a2c5-406e-ab93-18ad6203b5f7",
@@ -543,44 +518,19 @@
       "targets": [],
       "value": ""
     }, {
-      "id": "ddbb66b9-52b6-4245-80a7-57d794a6e642",
+      "id": "a938b678-0b78-46f7-ae19-a98b6d1090d5",
       "comment": "",
-      "command": "click",
-      "target": "name=query",
-      "targets": [
-        ["name=query", "name"],
-        ["css=.input-wrapper > input", "css:finder"],
-        ["xpath=//input[@name='query']", "xpath:attributes"],
-        ["xpath=//div[@id='box-search']/div/form/div/input", "xpath:idRelative"],
-        ["xpath=//input", "xpath:position"]
-      ],
+      "command": "store",
+      "target": "Car",
+      "targets": [],
+      "value": "query"
+    }, {
+      "id": "de8f64ba-e8b5-4a64-a755-561f4ab9411f",
+      "comment": "",
+      "command": "run",
+      "target": "Func Search",
+      "targets": [],
       "value": ""
-    }, {
-      "id": "789f0d52-37a3-4b63-9105-b4c4b19ff5f9",
-      "comment": "",
-      "command": "type",
-      "target": "name=query",
-      "targets": [
-        ["name=query", "name"],
-        ["css=.input-wrapper > input", "css:finder"],
-        ["xpath=//input[@name='query']", "xpath:attributes"],
-        ["xpath=//div[@id='box-search']/div/form/div/input", "xpath:idRelative"],
-        ["xpath=//input", "xpath:position"]
-      ],
-      "value": "Car"
-    }, {
-      "id": "02d5df25-36e4-4c1f-92b1-035a5b44581f",
-      "comment": "",
-      "command": "sendKeys",
-      "target": "name=query",
-      "targets": [
-        ["name=query", "name"],
-        ["css=.input-wrapper > input", "css:finder"],
-        ["xpath=//input[@name='query']", "xpath:attributes"],
-        ["xpath=//div[@id='box-search']/div/form/div/input", "xpath:idRelative"],
-        ["xpath=//input", "xpath:position"]
-      ],
-      "value": "${KEY_ENTER}"
     }, {
       "id": "82d527c2-fe29-4752-b499-81c08a8bddc0",
       "comment": "",
@@ -802,6 +752,56 @@
         ["xpath=//h1[contains(.,'Your order is successfully completed!')]", "xpath:innerText"]
       ],
       "value": "Your order is successfully completed!"
+    }]
+  }, {
+    "id": "5dcc35e0-ae18-486e-9cf2-ad0fe12fb7a3",
+    "name": "Func Search",
+    "commands": [{
+      "id": "b6086ca8-d945-44eb-8565-6113b4bb30f2",
+      "comment": "",
+      "command": "click",
+      "target": "name=query",
+      "targets": [
+        ["name=query", "name"],
+        ["css=.input-wrapper > input", "css:finder"],
+        ["xpath=//input[@name='query']", "xpath:attributes"],
+        ["xpath=//div[@id='box-search']/div/form/div/input", "xpath:idRelative"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "e014b1dc-4f46-4ecd-ad8b-52912494b2c1",
+      "comment": "",
+      "command": "type",
+      "target": "name=query",
+      "targets": [
+        ["name=query", "name"],
+        ["css=.input-wrapper > input", "css:finder"],
+        ["xpath=//input[@name='query']", "xpath:attributes"],
+        ["xpath=//div[@id='box-search']/div/form/div/input", "xpath:idRelative"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": "${query}"
+    }, {
+      "id": "95efa94d-86f2-40e1-8e6c-ec134aa22152",
+      "comment": "",
+      "command": "sendKeys",
+      "target": "name=query",
+      "targets": [
+        ["name=query", "name"],
+        ["css=.input-wrapper > input", "css:finder"],
+        ["xpath=//input[@name='query']", "xpath:attributes"],
+        ["xpath=//div[@id='box-search']/div/form/div/input", "xpath:idRelative"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": "${KEY_ENTER}"
+    }, {
+      "id": "cec6abbc-b1e8-4bbe-b45f-a88a87354134",
+      "comment": "",
+      "command": "waitForElementPresent",
+      "target": "css=#box-search-results",
+      "targets": [],
+      "value": "10000"
     }]
   }],
   "suites": [{
