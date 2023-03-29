@@ -450,6 +450,80 @@
       "target": "name=query",
       "targets": [],
       "value": "${query}"
+    }, {
+      "id": "a3173211-85bc-465d-871a-6719f9203485",
+      "comment": "",
+      "command": "executeScript",
+      "target": "return 1",
+      "targets": [],
+      "value": "counter"
+    }, {
+      "id": "301173fc-a7c7-4aa2-908e-085590bece6b",
+      "comment": "",
+      "command": "storeXpathCount",
+      "target": "xpath=//div[@class='content']/ul[@class='listing-wrapper products']/li",
+      "targets": [],
+      "value": "length"
+    }, {
+      "id": "24df7047-1496-4346-a985-52b5af0f6761",
+      "comment": "",
+      "command": "if",
+      "target": "${length} != 0",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "f45620d6-d777-469d-a696-9677a38b7c75",
+      "comment": "",
+      "command": "while",
+      "target": "${counter} <= ${length}",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "73e8922c-2a6d-4748-a42b-0cb759289d00",
+      "comment": "",
+      "command": "storeText",
+      "target": "css=.product:nth-child(${counter}) .name",
+      "targets": [
+        ["css=.product:nth-child(1) .name", "css:finder"],
+        ["xpath=//div[@id='box-search-results']/div/ul/li/a/div[2]", "xpath:idRelative"],
+        ["xpath=//a/div[2]", "xpath:position"]
+      ],
+      "value": "name"
+    }, {
+      "id": "0f477f1d-7296-49ab-96ea-be04bcad90ac",
+      "comment": "",
+      "command": "executeScript",
+      "target": "return ${name}.includes(${query})",
+      "targets": [],
+      "value": "contains"
+    }, {
+      "id": "50af4f2e-51d5-4168-8896-13c5a234eb18",
+      "comment": "",
+      "command": "assert",
+      "target": "contains",
+      "targets": [],
+      "value": "true"
+    }, {
+      "id": "4dd8bb2f-3992-415f-ab14-921b0b166a53",
+      "comment": "",
+      "command": "executeScript",
+      "target": "return ${counter} + 1",
+      "targets": [],
+      "value": "counter"
+    }, {
+      "id": "0b84c6bf-cb3b-475a-9ff8-87803b60ee51",
+      "comment": "",
+      "command": "end",
+      "target": "",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "dd609aca-a9b6-4bd1-90c6-ec90526e89e5",
+      "comment": "",
+      "command": "end",
+      "target": "",
+      "targets": [],
+      "value": ""
     }]
   }, {
     "id": "8de3175a-a2c5-406e-ab93-18ad6203b5f7",
