@@ -24,7 +24,7 @@
       "id": "d6039e9d-56d7-4fc9-96af-27deb77976a5",
       "comment": "",
       "command": "click",
-      "target": "xpath=//img[@alt='Green Duck']",
+      "target": "css=#box-most-popular .product .image",
       "targets": [
         ["css=#box-most-popular .product:nth-child(3) .image", "css:finder"],
         ["xpath=//img[@alt='Green Duck']", "xpath:img"],
@@ -33,7 +33,48 @@
       ],
       "value": ""
     }, {
-      "id": "3c819a5b-2fe5-4688-9656-d06f9cdf908e",
+      "id": "522ff1d7-43c3-4dfc-9c7b-08a92343dd1f",
+      "comment": "",
+      "command": "storeXpathCount",
+      "target": "xpath=//select[@name='options[Size]']",
+      "targets": [],
+      "value": "dropdowns"
+    }, {
+      "id": "1ee4c224-7e05-41e9-ba3f-f89943f307cd",
+      "comment": "",
+      "command": "if",
+      "target": "${dropdowns} > 0",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "22426452-2227-4573-8b7b-3159245fbfd8",
+      "comment": "",
+      "command": "click",
+      "target": "name=options[Size]",
+      "targets": [
+        ["name=options[Size]", "name"],
+        ["css=select", "css:finder"],
+        ["xpath=//select[@name='options[Size]']", "xpath:attributes"],
+        ["xpath=//div[@id='box-product']/div[2]/div[2]/div[5]/form/table/tbody/tr/td/select", "xpath:idRelative"],
+        ["xpath=//select", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "4bc9f48b-13e2-4ec2-855b-4b606835d451",
+      "comment": "",
+      "command": "select",
+      "target": "name=options[Size]",
+      "targets": [],
+      "value": "label=Small"
+    }, {
+      "id": "0a82be95-8bdc-4c7b-a29c-f62ffdaaaffb",
+      "comment": "",
+      "command": "end",
+      "target": "",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "6ad3188a-65ab-4663-9997-57a468e9d194",
       "comment": "",
       "command": "click",
       "target": "name=quantity",
@@ -66,6 +107,39 @@
       ],
       "value": "${quantity}"
     }, {
+      "id": "cf6b213a-dfc1-4d97-9fed-496e195d884d",
+      "comment": "",
+      "command": "storeXpathCount",
+      "target": "xpath=//div[@id='box-product']//strong[@class='campaign-price']",
+      "targets": [],
+      "value": "actions"
+    }, {
+      "id": "d9454018-4473-4d72-9b4d-9aa0cd2e17cc",
+      "comment": "",
+      "command": "if",
+      "target": "${actions} > 0",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "9d32304f-967a-41f3-808e-34482b4fd192",
+      "comment": "",
+      "command": "storeText",
+      "target": "css=.campaign-price",
+      "targets": [
+        ["css=.campaign-price", "css:finder"],
+        ["xpath=//div[@id='box-product']/div[2]/div[2]/div[2]/strong", "xpath:idRelative"],
+        ["xpath=//div[2]/strong", "xpath:position"],
+        ["xpath=//strong[contains(.,'$18')]", "xpath:innerText"]
+      ],
+      "value": "price"
+    }, {
+      "id": "c95837f4-cbef-4b72-8bd8-71973bff5f70",
+      "comment": "",
+      "command": "else",
+      "target": "",
+      "targets": [],
+      "value": ""
+    }, {
       "id": "92e220de-1e23-4126-a05f-387c98237353",
       "comment": "",
       "command": "storeText",
@@ -77,6 +151,13 @@
         ["xpath=//span[contains(.,'$20')]", "xpath:innerText"]
       ],
       "value": "price"
+    }, {
+      "id": "fc1d9e5d-b6bc-4aec-9319-da5936b90a50",
+      "comment": "",
+      "command": "end",
+      "target": "",
+      "targets": [],
+      "value": ""
     }, {
       "id": "662b14db-e9c6-4b2c-aab3-2a6b6e8e50f9",
       "comment": "",
@@ -90,20 +171,6 @@
         ["xpath=//td/button", "xpath:position"],
         ["xpath=//button[contains(.,'Add To Cart')]", "xpath:innerText"]
       ],
-      "value": ""
-    }, {
-      "id": "c72d91c1-b5f0-4293-936b-ed14513fc3c2",
-      "comment": "",
-      "command": "//Плохой стиль задержки выполнения",
-      "target": "",
-      "targets": [],
-      "value": ""
-    }, {
-      "id": "80b07b68-a742-4c78-9b61-c52bf0a8e784",
-      "comment": "",
-      "command": "//pause",
-      "target": "3000",
-      "targets": [],
       "value": ""
     }, {
       "id": "36c319b4-c4e9-4a99-bc59-c6f3e721a80f",
@@ -120,33 +187,12 @@
       "targets": [],
       "value": "10000"
     }, {
-      "id": "51bd7cb9-e0a1-4b94-9cdb-362c7adae995",
-      "comment": "",
-      "command": "//Вариант проверки для pause",
-      "target": "",
-      "targets": [],
-      "value": ""
-    }, {
       "id": "54867b03-1aa2-4d2a-ac41-aa24c6e2f753",
       "comment": "",
       "command": "executeScript",
       "target": "return ${quantity} * ${price}.substring(1)",
       "targets": [],
       "value": "total"
-    }, {
-      "id": "ed4820b6-eab2-4616-8c99-cc716f21c49f",
-      "comment": "",
-      "command": "assertText",
-      "target": "css=a.content",
-      "targets": [],
-      "value": "Cart:\\n${quantity} item(s) - $${total}"
-    }, {
-      "id": "22e9e52d-6955-44ec-99e4-e169b6e7ee93",
-      "comment": "",
-      "command": "//Вариант проверки за счет новой реализации wait for text!!!",
-      "target": "",
-      "targets": [],
-      "value": ""
     }, {
       "id": "ff27cafa-19fa-4a7c-ae25-d0bad26bd244",
       "comment": "",
