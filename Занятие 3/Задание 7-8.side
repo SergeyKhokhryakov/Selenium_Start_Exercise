@@ -1,0 +1,528 @@
+{
+  "id": "0802bbd2-c012-4911-a549-f9438945399d",
+  "version": "2.0",
+  "name": "Open_eShop",
+  "url": "https://open-eshop.stqa.ru/oc-panel/auth/login/",
+  "tests": [{
+    "id": "64005476-8dbd-480b-9228-d697f37a01c7",
+    "name": "LogIn",
+    "commands": [{
+      "id": "f6e879ba-f166-49a0-951b-35d273376961",
+      "comment": "",
+      "command": "open",
+      "target": "https://open-eshop.stqa.ru/oc-panel/auth/login/",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "4e613ff4-ca8d-4d1b-a9d3-f7828161b46b",
+      "comment": "",
+      "command": "setWindowSize",
+      "target": "1650x942",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "3aeccb91-8302-4738-9a73-90cc7ad2bdbe",
+      "comment": "",
+      "command": "run",
+      "target": "Func Login",
+      "targets": [],
+      "value": ""
+    }]
+  }, {
+    "id": "72184acf-42b2-4b08-9a8b-16488e19c38b",
+    "name": "CreateNewCoupon",
+    "commands": [{
+      "id": "790690a0-8763-4455-8e3b-0c5fcbdbe28e",
+      "comment": "",
+      "command": "open",
+      "target": "https://open-eshop.stqa.ru/oc-panel",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "90d3feab-7ca9-4bbb-8fcf-80db95b11b40",
+      "comment": "",
+      "command": "setWindowSize",
+      "target": "1174x694",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "73f02744-f5d1-440b-8181-3dce1c8e78bd",
+      "comment": "",
+      "command": "run",
+      "target": "Func Login",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "de3b4923-96e1-4ef8-ae46-c1d481ddb95e",
+      "comment": "",
+      "command": "click",
+      "target": "css=.panel a[href*='One'] .title-txt",
+      "targets": [
+        ["css=.panel:nth-child(1) .title-txt", "css:finder"],
+        ["xpath=//div[@id='accordion']/div/div/h4/a/span[2]", "xpath:idRelative"],
+        ["xpath=//a/span[2]", "xpath:position"],
+        ["xpath=//span[contains(.,'eShop')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "0acceb76-5200-4aac-bcdc-f5793a80cb25",
+      "comment": "",
+      "command": "click",
+      "target": "css=#collapseOne a[href*='coupon'] .side-name-link",
+      "targets": [
+        ["css=#collapseOne tr:nth-child(4) .side-name-link", "css:finder"],
+        ["xpath=//div[@id='collapseOne']/div/table/tbody/tr[4]/td/li/a/span", "xpath:idRelative"],
+        ["xpath=//tr[4]/td/li/a/span", "xpath:position"],
+        ["xpath=//span[contains(.,'Coupons')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "c723bb54-8ad2-4a62-a549-8c8985f6dcb6",
+      "comment": "",
+      "command": "click",
+      "target": "css=#content a[href*='create']",
+      "targets": [
+        ["css=.pull-right:nth-child(2)", "css:finder"],
+        ["xpath=//div[@id='content']/a", "xpath:idRelative"],
+        ["xpath=//a[contains(@href, 'https://open-eshop.stqa.ru/oc-panel/Coupon/create')]", "xpath:href"],
+        ["xpath=//body/div/div[2]/a", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "a8221e6c-09e6-493c-abd4-ae6a43bf7671",
+      "comment": "",
+      "command": "store",
+      "target": "CouponFixed",
+      "targets": [],
+      "value": "coupon"
+    }, {
+      "id": "a77479bd-02c5-436f-9b8b-ceefe1d9f1c8",
+      "comment": "",
+      "command": "type",
+      "target": "id=name",
+      "targets": [
+        ["id=name", "id"],
+        ["name=name", "name"],
+        ["css=#name", "css:finder"],
+        ["xpath=//input[@id='name']", "xpath:attributes"],
+        ["xpath=//div[@id='content']/div[3]/div/div/div/form/div/div/input", "xpath:idRelative"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": "${coupon}"
+    }, {
+      "id": "7f85f450-d1f0-46e4-86d8-661a6e4a3202",
+      "comment": "",
+      "command": "click",
+      "target": "name=valid_date",
+      "targets": [
+        ["name=valid_date", "name"],
+        ["css=.form-group:nth-child(6) .form-control", "css:finder"],
+        ["xpath=//input[@name='valid_date']", "xpath:attributes"],
+        ["xpath=//div[@id='content']/div[3]/div/div/div/form/div[5]/div/input", "xpath:idRelative"],
+        ["xpath=//div[5]/div/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "20a3d6f1-4c80-4f6f-af63-e962d37f5a68",
+      "comment": "",
+      "command": "click",
+      "target": "css=tr > .active",
+      "targets": [
+        ["css=tr > .active", "css:finder"],
+        ["xpath=//tr[4]/td[5]", "xpath:position"],
+        ["xpath=//td[contains(.,'23')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "b9ab3dca-7292-47f2-9063-6a3359044bd6",
+      "comment": "",
+      "command": "click",
+      "target": "css=.form-actions",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "457fb858-bee9-4ce1-90ee-c803aa698b85",
+      "comment": "",
+      "command": "type",
+      "target": "id=number_coupons",
+      "targets": [
+        ["id=number_coupons", "id"],
+        ["name=number_coupons", "name"],
+        ["css=#number_coupons", "css:finder"],
+        ["xpath=//input[@id='number_coupons']", "xpath:attributes"],
+        ["xpath=//div[@id='content']/div[3]/div/div/div/form/div[6]/div/input", "xpath:idRelative"],
+        ["xpath=//div[6]/div/input", "xpath:position"]
+      ],
+      "value": "5"
+    }, {
+      "id": "13a47465-b3fd-4b26-87ac-3da1f921be86",
+      "comment": "",
+      "command": "click",
+      "target": "name=submit",
+      "targets": [
+        ["name=submit", "name"],
+        ["css=.btn-primary", "css:finder"],
+        ["xpath=//button[@name='submit']", "xpath:attributes"],
+        ["xpath=//div[@id='content']/div[3]/div/div/div/form/div[7]/button", "xpath:idRelative"],
+        ["xpath=//div[7]/button", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "a721f4d4-01c9-4b1d-b1d3-f896e7ef605c",
+      "comment": "",
+      "command": "assertText",
+      "target": "xpath=//h4[@class='alert-heading']",
+      "targets": [],
+      "value": "Success"
+    }, {
+      "id": "01534579-beb1-468f-b75b-e7167e599915",
+      "comment": "",
+      "command": "run",
+      "target": "Func Search",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "30b5a78b-9385-4990-9f1e-34ef951bec04",
+      "comment": "",
+      "command": "assertElementPresent",
+      "target": "xpath=//div[@class='table-responsive'][count(table)=1]",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "58dfeaa0-50c6-43b7-a313-9005c738dc8e",
+      "comment": "",
+      "command": "assertValue",
+      "target": "xpath=//input[@value]",
+      "targets": [],
+      "value": "${coupon}"
+    }, {
+      "id": "2e33c773-9487-48f3-87fe-d3f7960a9fa3",
+      "comment": "",
+      "command": "run",
+      "target": "Func Delete",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "4ec9da79-e959-44cc-99ea-b4ac50be1d7f",
+      "comment": "",
+      "command": "assertElementNotPresent",
+      "target": "xpath=//div[@class='table-responsive']//tr[@style='display: none;']",
+      "targets": [],
+      "value": ""
+    }]
+  }, {
+    "id": "efa9eb22-bdde-4a03-bc03-185dbd063c59",
+    "name": "FindDeleteCoupon",
+    "commands": [{
+      "id": "8e73adb8-4423-44e4-bb83-526824555cb4",
+      "comment": "",
+      "command": "open",
+      "target": "https://open-eshop.stqa.ru/oc-panel",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "15c6f03e-2f45-49bb-8d7e-e21d665cd321",
+      "comment": "",
+      "command": "setWindowSize",
+      "target": "1174x694",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "1a32d55c-e083-478d-b36e-b6767e0854c2",
+      "comment": "",
+      "command": "run",
+      "target": "Func Login",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "6dcc8281-4c47-44a0-b162-08b0f45f226b",
+      "comment": "",
+      "command": "click",
+      "target": "css=.panel a[href*='One'] .title-txt",
+      "targets": [
+        ["css=.panel:nth-child(1) .title-txt", "css:finder"],
+        ["xpath=//div[@id='accordion']/div/div/h4/a/span[2]", "xpath:idRelative"],
+        ["xpath=//a/span[2]", "xpath:position"],
+        ["xpath=//span[contains(.,'eShop')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "44fe1200-0338-4484-80d4-925245fc23f2",
+      "comment": "",
+      "command": "click",
+      "target": "css=#collapseOne a[href*='coupon'] .side-name-link",
+      "targets": [
+        ["css=#collapseOne tr:nth-child(4) .side-name-link", "css:finder"],
+        ["xpath=//div[@id='collapseOne']/div/table/tbody/tr[4]/td/li/a/span", "xpath:idRelative"],
+        ["xpath=//tr[4]/td/li/a/span", "xpath:position"],
+        ["xpath=//span[contains(.,'Coupons')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "a8797405-47a3-4b6a-89aa-c79af12a5271",
+      "comment": "",
+      "command": "store",
+      "target": "CouponFixed",
+      "targets": [],
+      "value": "coupon"
+    }, {
+      "id": "596eacf7-c275-4645-a85b-cf9f8ee3764f",
+      "comment": "",
+      "command": "run",
+      "target": "Func Search",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "a614ad3a-5f3f-441c-b77d-2fdc6390f926",
+      "comment": "",
+      "command": "storeXpathCount",
+      "target": "xpath=//div[@class='table-responsive']//tbody/tr",
+      "targets": [],
+      "value": "counter"
+    }, {
+      "id": "891cbd55-3d91-44f7-b51f-aea8a69cb3e6",
+      "comment": "",
+      "command": "if",
+      "target": "${counter} == 1",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "ba582561-33b0-40b5-adf4-c12c9ab7f340",
+      "comment": "",
+      "command": "run",
+      "target": "Func Delete",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "0eb077e0-329b-4f7c-b874-d1c69c1459f0",
+      "comment": "",
+      "command": "end",
+      "target": "",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "bff235dc-27e5-4f1f-a93f-b15227673fd8",
+      "comment": "",
+      "command": "click",
+      "target": "linkText=Coupon",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "5d19e955-181b-4c05-8bb7-bc360839d94e",
+      "comment": "",
+      "command": "click",
+      "target": "xpath=//td[last()]/a/i",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "766cf4a8-b466-4a87-9b91-8a876cf160b4",
+      "comment": "",
+      "command": "assertNotText",
+      "target": "css=h1",
+      "targets": [],
+      "value": "Update coupon ${coupon}"
+    }]
+  }, {
+    "id": "d8dcce36-d3c3-4842-823b-38b33361c0ab",
+    "name": "LogOut",
+    "commands": [{
+      "id": "c6bd3fc4-b91e-4a83-831d-c617ad421016",
+      "comment": "",
+      "command": "open",
+      "target": "https://open-eshop.stqa.ru/oc-panel",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "5c5e16fd-0ddc-4c42-a2be-3d6fde04173e",
+      "comment": "",
+      "command": "setWindowSize",
+      "target": "1174x695",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "b4fce285-604e-406c-8a90-5201d608a199",
+      "comment": "",
+      "command": "click",
+      "target": "css=.caret:nth-child(1)",
+      "targets": [
+        ["css=.caret:nth-child(1)", "css:finder"],
+        ["xpath=//a[2]/span", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "12975c16-54c5-48d8-a274-2a18e26d5f9f",
+      "comment": "",
+      "command": "click",
+      "target": "linkText=Logout",
+      "targets": [
+        ["linkText=Logout", "linkText"],
+        ["css=.dropdown-menu > li:nth-child(6) > a", "css:finder"],
+        ["xpath=//a[contains(@href, 'https://open-eshop.stqa.ru/oc-panel/auth/logout')]", "xpath:href"],
+        ["xpath=//li[6]/a", "xpath:position"],
+        ["xpath=//a[contains(.,' Logout')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "c8c048e0-9fb7-4f1b-8d7a-4445462996f0",
+      "comment": "",
+      "command": "assertText",
+      "target": "css=.page-header > h1",
+      "targets": [],
+      "value": "Login"
+    }]
+  }, {
+    "id": "087fa5a3-cbea-4680-a6af-f6eb37a13d76",
+    "name": "Func Login",
+    "commands": [{
+      "id": "f54cc21a-1ce3-4fd5-ae3a-7e9e2a48f33a",
+      "comment": "",
+      "command": "storeTitle",
+      "target": "",
+      "targets": [],
+      "value": "title"
+    }, {
+      "id": "eb5a5a7c-077d-456a-9fec-5f3eaae5eff8",
+      "comment": "",
+      "command": "if",
+      "target": "${title}.includes(\"Login\")",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "df5330fb-5d27-456e-b399-302d8c9c0756",
+      "comment": "",
+      "command": "type",
+      "target": "xpath=(//input[@name='email'])[4]",
+      "targets": [
+        ["css=.well:nth-child(3) > .form-group:nth-child(1) .form-control", "css:finder"],
+        ["xpath=(//input[@name='email'])[4]", "xpath:attributes"],
+        ["xpath=//section[@id='page']/form/div/div/input", "xpath:idRelative"],
+        ["xpath=//section/form/div/div/input", "xpath:position"]
+      ],
+      "value": "demo@open-eshop.com"
+    }, {
+      "id": "b8285fb1-9dce-4766-806a-a014e0c095c9",
+      "comment": "",
+      "command": "type",
+      "target": "xpath=(//input[@name='password'])[2]",
+      "targets": [
+        ["css=.well:nth-child(3) > .form-group:nth-child(2) .form-control", "css:finder"],
+        ["xpath=(//input[@name='password'])[2]", "xpath:attributes"],
+        ["xpath=//section[@id='page']/form/div[2]/div/input", "xpath:idRelative"],
+        ["xpath=//section/form/div[2]/div/input", "xpath:position"]
+      ],
+      "value": "demo"
+    }, {
+      "id": "357137e6-1f8d-4015-9ad1-308a14cef3e1",
+      "comment": "",
+      "command": "click",
+      "target": "css=section[id='page'] button[type='submit']",
+      "targets": [
+        ["css=.well:nth-child(3) .btn-primary", "css:finder"],
+        ["xpath=(//button[@type='submit'])[5]", "xpath:attributes"],
+        ["xpath=//section[@id='page']/form/div[4]/button", "xpath:idRelative"],
+        ["xpath=//section/form/div[4]/button", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "7b5cc15c-8a01-4bea-a05a-8c97a5b0fc54",
+      "comment": "",
+      "command": "assertText",
+      "target": "css=h1",
+      "targets": [],
+      "value": "Welcome Admin"
+    }, {
+      "id": "69b365f6-6605-4979-8516-3d46e55195a5",
+      "comment": "",
+      "command": "end",
+      "target": "",
+      "targets": [],
+      "value": ""
+    }]
+  }, {
+    "id": "01e390f6-6a69-48ed-9c5d-9e3e10353865",
+    "name": "Func Search",
+    "commands": [{
+      "id": "95154366-5d31-4124-a2f9-ff3b26643033",
+      "comment": "",
+      "command": "echo",
+      "target": "${coupon}",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "7e7f6cf7-9ec5-43ac-b0cf-8181445bc775",
+      "comment": "",
+      "command": "type",
+      "target": "name=name",
+      "targets": [],
+      "value": "${coupon}"
+    }, {
+      "id": "c52726f7-61f1-43a5-98d5-96c43855a802",
+      "comment": "",
+      "command": "click",
+      "target": "xpath=//form[@class='form-inline pull-right']/button[@type='submit']",
+      "targets": [],
+      "value": ""
+    }]
+  }, {
+    "id": "6fd1de67-e96c-4a4c-a853-f782de9386f1",
+    "name": "Func Delete",
+    "commands": [{
+      "id": "2d2b7930-c884-4a8e-9b04-b4d075853350",
+      "comment": "",
+      "command": "click",
+      "target": "css=.table-striped tbody tr:first-child a[href*='delete']",
+      "targets": [
+        ["css=.btn-danger", "css:finder"],
+        ["xpath=//tr[@id='tr18047']/td[7]/a[2]", "xpath:idRelative"],
+        ["xpath=//a[contains(@href, 'https://open-eshop.stqa.ru/oc-panel/Coupon/delete/18047')]", "xpath:href"],
+        ["xpath=//td[7]/a[2]", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "867356f1-3926-482a-b63b-95c42699bcff",
+      "comment": "",
+      "command": "pause",
+      "target": "500",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "9676ad90-4771-4992-bf54-f047096f54ca",
+      "comment": "",
+      "command": "waitForText",
+      "target": "css=h2",
+      "targets": [],
+      "value": "Are you sure you want to delete?"
+    }, {
+      "id": "7ae7b8c5-5b06-447d-bb23-904a0246ed5f",
+      "comment": "",
+      "command": "click",
+      "target": "css=.confirm",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "853e2a22-23bd-41f5-87db-3e7df13d2c7b",
+      "comment": "",
+      "command": "assertElementNotPresent",
+      "target": "xpath=//div[@class='table-responsive']//tr[@style='display: none;']",
+      "targets": [],
+      "value": ""
+    }]
+  }],
+  "suites": [{
+    "id": "11389ff0-48da-4138-8085-01e064d5fc71",
+    "name": "Positive",
+    "persistSession": false,
+    "parallel": false,
+    "timeout": 300,
+    "tests": ["64005476-8dbd-480b-9228-d697f37a01c7", "72184acf-42b2-4b08-9a8b-16488e19c38b", "efa9eb22-bdde-4a03-bc03-185dbd063c59", "d8dcce36-d3c3-4842-823b-38b33361c0ab"]
+  }, {
+    "id": "c067164d-98d5-4e52-9a2f-c80a55d455ee",
+    "name": "Creating-Deleting coupon",
+    "persistSession": false,
+    "parallel": false,
+    "timeout": 300,
+    "tests": ["64005476-8dbd-480b-9228-d697f37a01c7", "72184acf-42b2-4b08-9a8b-16488e19c38b", "d8dcce36-d3c3-4842-823b-38b33361c0ab"]
+  }],
+  "urls": ["https://open-eshop.stqa.ru/oc-panel/auth/login/"],
+  "plugins": []
+}
