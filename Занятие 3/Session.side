@@ -586,7 +586,7 @@
       "command": "assertText",
       "target": "css=h1",
       "targets": [],
-      "value": "Welcome Admin1"
+      "value": "Welcome Admin"
     }, {
       "id": "4ff22912-3c7d-437f-95db-d63184557748",
       "comment": "",
