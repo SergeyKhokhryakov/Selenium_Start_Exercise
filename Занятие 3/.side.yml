@@ -1,0 +1,14 @@
+capabilities:
+    browserName: "Edge"
+    browserVersion: '111.0'
+    'bstack:options':
+      os: "OS X"
+      osVersion: 'Monterey'
+      resolution: '1024x768'
+      sessionName: 'Selenium IDE automate W3C Desktop'
+      buildName: 'Selenium IDE automate W3C Desktop'
+      projectName: 'Selenium IDE automate W3C Desktop'
+      debug: true
+      consoleLogs: "verbose"
+      networkLogs: true
+server: "https://bsuser_SyZ0D8:v5nyESPipegtY1jctwXt@hub-cloud.browserstack.com/wd/hub"
